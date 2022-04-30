@@ -1,4 +1,4 @@
-package com.d1g1byt3.geofy;
+package com.digibyte.geofy;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
