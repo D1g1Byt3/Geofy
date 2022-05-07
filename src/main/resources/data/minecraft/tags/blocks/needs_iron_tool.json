@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "geofy:cobalt_block",
+    "geofy:raw_cobalt_block",
+    "geofy:cobalt_ore",
+    "geofy:deepslate_cobalt_ore"
+  ]
+}

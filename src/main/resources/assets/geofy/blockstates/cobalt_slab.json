@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "geofy:block/cobalt_slab"
+    },
+    "type=double":{
+  "model": "geofy:block/cobalt_block"
+},
+    "type=top": {
+      "model": "geofy:block/cobalt_slab_top"
+    }
+  }
+}

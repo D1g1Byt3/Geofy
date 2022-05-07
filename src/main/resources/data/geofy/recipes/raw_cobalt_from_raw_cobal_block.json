@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+        "ingredients":
+        [
+          {
+          "item": "geofy:raw_cobalt_block"
+          }
+        ],
+  "result": {
+    "item": "geofy:raw_cobalt",
+    "count": 9
+  }
+}

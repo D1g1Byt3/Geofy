@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "###",
+    "###",
+    " ##"
+  ],
+  "key": {"#": {"item": "geofy:coal_sliver"}},
+  "result": {"item": "minecraft:coal"}
+}
+

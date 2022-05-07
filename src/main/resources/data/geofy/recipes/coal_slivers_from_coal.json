@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "minecraft:coal"
+
+    }
+  ],
+  "result": {
+    "item": "geofy:coal_sliver",
+    "count": 8
+  }
+}

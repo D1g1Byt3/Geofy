@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": {"model": "geofy:block/cobalt_pressure_plate"},
+    "powered=true": {"model": "geofy:block/cobalt_pressure_plate_down"}
+  }
+}

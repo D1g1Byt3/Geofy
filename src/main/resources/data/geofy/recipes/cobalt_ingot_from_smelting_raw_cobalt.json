@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "geofy:raw_cobalt"
+  },
+  "result": "geofy:cobalt_ingot",
+  "experience": 0.5,
+  "cookingtime": 175
+}

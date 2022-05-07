@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "geofy:deepslate_cobalt_ore"
+  },
+  "result": "geofy:cobalt_ingot",
+  "experience": 1.2,
+  "cookingtime": 115
+}

@@ -1,0 +1,59 @@
+{
+  "itemGroup.geofytab": "Geofy",
+
+  "item.geofy.cobalt_ingot" : "Cobalt Ingot",
+  "item.geofy.cobalt_nugget" : "Cobalt Nugget",
+  "item.geofy.raw_cobalt" : "Raw Cobalt",
+  "item.geofy.coal_sliver" : "Coal Sliver",
+
+  "item.geofy.turnip" : "Turnip",
+
+  "item.geofy.cobalt_sword" : "Cobalt Sword",
+  "item.geofy.cobalt_pickaxe" : "Cobalt Pickaxe",
+  "item.geofy.cobalt_axe" : "Cobalt Axe",
+  "item.geofy.cobalt_shovel" : "Cobalt Shovel",
+  "item.geofy.cobalt_hoe" : "Cobalt Hoe",
+  "item.geofy.cobalt_paxel" : "Cobalt Paxel",
+  "item.geofy.scanning_rod" : "Scanning Rod",
+
+  "item.geofy.cobalt_helmet" : "Cobalt Helmet",
+  "item.geofy.cobalt_chestplate" : "Cobalt Chestplate",
+  "item.geofy.cobalt_leggings" : "Cobalt Leggings",
+  "item.geofy.cobalt_boots" : "Cobalt Boots",
+
+  "block.geofy.cobalt_block" : "Cobalt Block",
+
+  "block.geofy.cobalt_ore" : "Cobalt Ore",
+  "block.geofy.deepslate_cobalt_ore" : "Deepslate Cobalt Ore",
+
+  "block.geofy.raw_cobalt_block" : "Raw Cobalt Block",
+
+  "block.geofy.speedy_block" : "Speedy Block",
+
+  "block.geofy.cobalt_stairs": "Cobalt Stairs",
+
+  "block.geofy.cobalt_slab": "Cobalt Slab",
+
+  "block.geofy.cobalt_button": "Cobalt Button",
+
+  "block.geofy.cobalt_pressure_plate": "Cobalt Pressure Plate",
+
+  "block.geofy.cobalt_fence": "Cobalt Fence",
+  "block.geofy.cobalt_fence_gate": "Cobalt Gate",
+  "block.geofy.cobalt_wall": "Cobalt Wall",
+
+  "block.geofy.cobalt_door": "Cobalt Door",
+  "block.geofy.cobalt_trapdoor": "Cobalt TrapDoor",
+  "block.geofy.cherry_blossom_trapdoor": "Cherry Blossom TrapDoor",
+  "block.geofy.cherry_blossom_door": "Cherry Blossom Door",
+
+
+  "item.geofy.scanning_rod.no_valuables": "§eNo§r §bValuable Ores§r §eFound§r",
+
+  "tooltip.geofy.scanning_rod.shift": "§eRight Click§r to find Valuable Ore",
+  "tooltip.block.speedy_block.shift": "Gives §bSpeed II§r on walking above",
+
+  "tooltip.geofy.scanning_rod": "Press §eSHIFT§r for more Info!",
+  "tooltip.block.speedy_block": "Press §eSHIFT§r for more Info!"
+
+}

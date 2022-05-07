@@ -1,0 +1,14 @@
+{
+  "type": "minecrfat:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "geofy:cobalt_block"
+        }
+      ]
+    }
+  ]
+}
