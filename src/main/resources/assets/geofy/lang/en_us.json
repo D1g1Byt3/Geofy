@@ -55,6 +55,10 @@
   "tooltip.block.speedy_block.shift": "Gives §bSpeed II§r on walking above",
 
   "tooltip.geofy.scanning_rod": "Press §eSHIFT§r for more Info!",
-  "tooltip.block.speedy_block": "Press §eSHIFT§r for more Info!"
+  "tooltip.block.speedy_block": "Press §eSHIFT§r for more Info!",
+
+  "enchantment.geofy.lightning_striker": "Lightning Striker"
+
+
 
 }

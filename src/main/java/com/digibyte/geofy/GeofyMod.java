@@ -1,6 +1,7 @@
 package com.digibyte.geofy;
 
 import com.digibyte.geofy.block.ModBlocks;
+import com.digibyte.geofy.enchantment.ModEnchantments;
 import com.digibyte.geofy.item.ModItems;
 import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -40,6 +41,8 @@ public class GeofyMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModTags.register();
+
+        ModEnchantments.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

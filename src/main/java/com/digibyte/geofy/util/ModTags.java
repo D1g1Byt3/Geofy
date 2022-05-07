@@ -14,7 +14,6 @@ public class ModTags {
 
 
     public static void register(){
-
         Blocks.registerBlockTags();
         Items.registerItemTags();
     }
