@@ -1,6 +1,7 @@
 package com.digibyte.geofy.block;
 
 import com.digibyte.geofy.GeofyMod;
+import com.digibyte.geofy.block.custom.CobaltLampBlock;
 import com.digibyte.geofy.block.custom.SpeedyBlock;
 import com.digibyte.geofy.item.ModCreativeModeTab;
 import com.digibyte.geofy.item.ModItems;
@@ -57,25 +58,20 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COBALT_BUTTON = registerBlock("cobalt_button",
             () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noCollission()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops().noCollission()), tab);
     public static final RegistryObject<Block> COBALT_PRESSURE_PLATE = registerBlock("cobalt_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noCollission()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops().noCollission()), tab);
 
     public static final RegistryObject<Block> COBALT_FENCE = registerBlock("cobalt_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops()), tab);
     public static final RegistryObject<Block> COBALT_FENCE_GATE = registerBlock("cobalt_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops()), tab);
     public static final RegistryObject<Block> COBALT_WALL = registerBlock("cobalt_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops()), tab);
     /* public static final RegistryObject<Block> COBALT_DOOR = registerBlock("cobalt_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()) {
@@ -91,12 +87,18 @@ public class ModBlocks {
      */
     public static final RegistryObject<Block> CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), tab);
     public static final RegistryObject<Block> CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()) {
-            }, tab);
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), tab);
+
+    public static final RegistryObject<Block> COBALT_LAMP = registerBlock("cobalt_lamp",
+            () -> new CobaltLampBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel((state)-> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)), tab);
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab, String toolTipKey) {

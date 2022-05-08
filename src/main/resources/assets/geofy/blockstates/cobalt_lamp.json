@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model":  "geofy:block/cobalt_lamp_off"},
+    "clicked=true": { "model":  "geofy:block/cobalt_lamp_on"}
+  }
+}
