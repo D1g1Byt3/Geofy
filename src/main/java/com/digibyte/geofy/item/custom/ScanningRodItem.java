@@ -1,8 +1,11 @@
 package com.digibyte.geofy.item.custom;
 
+import com.digibyte.geofy.item.ModItems;
+import com.digibyte.geofy.util.InventoryUtil;
 import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -40,6 +43,11 @@ public class ScanningRodItem extends Item {
                 if(isValuableBlock(blockBelow)){
                     outputValuableCoordinates(positionClicked.below(i), player, blockBelow);
                     foundBlock = true;
+
+                    if(InventoryUtil.hasPlayerStackInventory(player, ModItems.DATA_TABLET.get())){
+                        addNbtToDataTablet(player, positionClicked.below(i), blockBelow);
+                    }
+
                     break;
                 }
             }
@@ -56,6 +64,18 @@ public class ScanningRodItem extends Item {
 
 
         return super.useOn(pContext);
+    }
+
+    private void addNbtToDataTablet(Player player, BlockPos pos, Block blockBelow){
+        ItemStack dataTablet =
+                player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET.get()));
+
+        CompoundTag nbtData = new CompoundTag();
+        nbtData.putString("geofy.last_ore", "Found " + blockBelow.asItem().getRegistryName().toString() + " at " +
+                pos.getX() + ", " +
+                pos.getY() + ", " +
+                pos.getZ() + ")");
+        dataTablet.setTag(nbtData);
     }
 
     @Override

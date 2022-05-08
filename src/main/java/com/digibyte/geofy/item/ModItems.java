@@ -19,13 +19,18 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, GeofyMod.MOD_ID);
 
 
-
-    public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot", () -> new Item(new Item.Properties().tab(tab)));
-    public static final RegistryObject<Item> COBALT_NUGGET = ITEMS.register("cobalt_nugget", () -> new Item(new Item.Properties().tab(tab)));
-    public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt", () -> new Item(new Item.Properties().tab(tab)));
-    public static final RegistryObject<Item> SCANNING_ROD = ITEMS.register("scanning_rod", () -> new ScanningRodItem(new Item.Properties().tab(tab).durability(64)));
-    public static final RegistryObject<Item> COAL_SLIVER = ITEMS.register("coal_sliver", () -> new CoalSliverItem(new Item.Properties().tab(tab)));
-    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip", () -> new Item(new Item.Properties().tab(tab).food(ModFoods.TURNIP)));
+    public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
+            () -> new Item(new Item.Properties().tab(tab)));
+    public static final RegistryObject<Item> COBALT_NUGGET = ITEMS.register("cobalt_nugget",
+            () -> new Item(new Item.Properties().tab(tab)));
+    public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt",
+            () -> new Item(new Item.Properties().tab(tab)));
+    public static final RegistryObject<Item> SCANNING_ROD = ITEMS.register("scanning_rod",
+            () -> new ScanningRodItem(new Item.Properties().tab(tab).durability(64)));
+    public static final RegistryObject<Item> COAL_SLIVER = ITEMS.register("coal_sliver",
+            () -> new CoalSliverItem(new Item.Properties().tab(tab)));
+    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
+            () -> new Item(new Item.Properties().tab(tab).food(ModFoods.TURNIP)));
 
     public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword",
             () -> new LevitationSwordItem(ModTiers.COBALT, 2, 3f, new Item.Properties().tab(tab)));
@@ -52,9 +57,8 @@ public class ModItems {
     public static final RegistryObject<Item> COBALT_HORSE_ARMOR = ITEMS.register("cobalt_horse_armor",
             () -> new HorseArmorItem(12, "cobalt", new Item.Properties().tab(tab)));
 
-
-
-
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().tab(tab).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus){
