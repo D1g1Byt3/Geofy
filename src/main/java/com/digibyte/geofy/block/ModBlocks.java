@@ -3,6 +3,7 @@ package com.digibyte.geofy.block;
 import com.digibyte.geofy.GeofyMod;
 import com.digibyte.geofy.block.custom.CobaltLampBlock;
 import com.digibyte.geofy.block.custom.SpeedyBlock;
+import com.digibyte.geofy.block.custom.TurnipCropBlock;
 import com.digibyte.geofy.item.ModCreativeModeTab;
 import com.digibyte.geofy.item.ModItems;
 import net.minecraft.client.gui.screens.Screen;
@@ -87,15 +88,19 @@ public class ModBlocks {
      */
     public static final RegistryObject<Block> CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), tab);
+                    .strength(2f).requiresCorrectToolForDrops().noOcclusion()), tab);
     public static final RegistryObject<Block> CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), tab);
+                    .strength(2f).requiresCorrectToolForDrops().noOcclusion()), tab);
 
     public static final RegistryObject<Block> COBALT_LAMP = registerBlock("cobalt_lamp",
             () -> new CobaltLampBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()
+                    .strength(2f).requiresCorrectToolForDrops()
                     .lightLevel((state)-> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)), tab);
+
+    public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
+            () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)
+                    .noCollission().noOcclusion()));
 
 
 

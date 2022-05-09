@@ -7,6 +7,7 @@
   "item.geofy.coal_sliver" : "Coal Sliver",
 
   "item.geofy.turnip" : "Turnip",
+  "item.geofy.turnip_seeds" : "Turnip Seeds",
 
   "item.geofy.cobalt_sword" : "Cobalt Sword",
   "item.geofy.cobalt_pickaxe" : "Cobalt Pickaxe",
@@ -49,6 +50,8 @@
   "block.geofy.cherry_blossom_door": "Cherry Blossom Door",
 
   "block.geofy.cobalt_lamp": "Cobalt Lamp",
+
+  "block.geofy.turnip_crop": "Turnip Crop",
 
   "item.geofy.data_tablet": "Data Tablet",
 

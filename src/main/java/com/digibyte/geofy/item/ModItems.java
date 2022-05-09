@@ -1,6 +1,7 @@
 package com.digibyte.geofy.item;
 
 import com.digibyte.geofy.GeofyMod;
+import com.digibyte.geofy.block.ModBlocks;
 import com.digibyte.geofy.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -59,6 +60,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
             () -> new DataTabletItem(new Item.Properties().tab(tab).stacksTo(1)));
+
+    public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new Item.Properties().tab(tab)));
 
 
     public static void register(IEventBus eventBus){
