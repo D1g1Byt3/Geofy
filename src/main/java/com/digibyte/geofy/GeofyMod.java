@@ -3,6 +3,7 @@ package com.digibyte.geofy;
 import com.digibyte.geofy.block.ModBlocks;
 import com.digibyte.geofy.enchantment.ModEnchantments;
 import com.digibyte.geofy.item.ModItems;
+import com.digibyte.geofy.util.ModItemProperties;
 import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -51,6 +52,9 @@ public class GeofyMod
     }
 
     private void clientSetup(final FMLClientSetupEvent event){
+
+        ModItemProperties.addCustomItemProperties();
+
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_DOOR.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_TRAPDOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
