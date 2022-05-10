@@ -1,5 +1,6 @@
 package com.digibyte.geofy.block.custom;
 
+import com.digibyte.geofy.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

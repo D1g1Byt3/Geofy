@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "geofy:raw_cobalt"
+      "tag": "minecraft:terracotta"
     }
-    },
-    "result": {
-      "item": "geofy:raw_cobalt_block"
-    }
+  },
+  "result": {
+    "item": "geofy:speedy_block",
+    "count": 5
+  }
 }
-
