@@ -46,6 +46,8 @@ public class ModItems {
             () -> new HoeItem(ModTiers.COBALT, 1, 0f, new Item.Properties().tab(tab)));
     public static final RegistryObject<Item> COBALT_PAXEL = ITEMS.register("cobalt_paxel",
             () -> new PaxelItem(ModTiers.COBALT, 1, 0f, new Item.Properties().tab(tab)));
+    public static final RegistryObject<Item> COBALT_STAFF = ITEMS.register("cobalt_staff",
+            () -> new Item(new Item.Properties().tab(tab).stacksTo(1)));
 
     public static final RegistryObject<Item> COBALT_HELMET = ITEMS.register("cobalt_helmet",
             () -> new ModArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD, new Item.Properties().tab(tab)));

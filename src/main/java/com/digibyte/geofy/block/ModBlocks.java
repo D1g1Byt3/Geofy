@@ -1,6 +1,7 @@
 package com.digibyte.geofy.block;
 
 import com.digibyte.geofy.GeofyMod;
+import com.digibyte.geofy.block.custom.CobaltBlasterBlock;
 import com.digibyte.geofy.block.custom.CobaltLampBlock;
 import com.digibyte.geofy.block.custom.SpeedyBlock;
 import com.digibyte.geofy.block.custom.TurnipCropBlock;
@@ -108,6 +109,9 @@ public class ModBlocks {
             () -> new FlowerBlock(MobEffects.BLINDNESS,4,BlockBehaviour.Properties.copy(Blocks.DANDELION)), tab);
     public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
             () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE ,BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
+    public static final RegistryObject<Block> COBALT_BLASTER = registerBlock("cobalt_blaster",
+            () -> new CobaltBlasterBlock(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()), tab);
 
 
 

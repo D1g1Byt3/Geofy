@@ -15,6 +15,7 @@
   "item.geofy.cobalt_shovel" : "Cobalt Shovel",
   "item.geofy.cobalt_hoe" : "Cobalt Hoe",
   "item.geofy.cobalt_paxel" : "Cobalt Paxel",
+  "item.geofy.cobalt_staff" : "Cobalt Staff",
   "item.geofy.scanning_rod" : "Scanning Rod",
 
   "item.geofy.cobalt_helmet" : "Cobalt Helmet",
@@ -51,6 +52,8 @@
   "block.geofy.cobalt_trapdoor": "Cobalt TrapDoor",
   "block.geofy.cherry_blossom_trapdoor": "Cherry Blossom TrapDoor",
   "block.geofy.cherry_blossom_door": "Cherry Blossom Door",
+
+  "block.geofy.cobalt_blaster": "Cobalt Blaster",
 
   "block.geofy.cobalt_lamp": "Cobalt Lamp",
 
