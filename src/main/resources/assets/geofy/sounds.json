@@ -4,5 +4,51 @@
     "sounds": [
       "geofy:scanning_rod_found_ore"
     ]
+  },
+  "cobalt_lamp_step": {
+    "subtitle": "sounds.geofy.cobalt_lamp_step",
+    "sounds": [
+      "geofy:cobalt_lamp_step"
+    ]
+  },
+  "cobalt_lamp_place": {
+    "subtitle": "sounds.geofy.cobalt_lamp_place",
+    "sounds": [
+      "geofy:cobalt_lamp_place"
+    ]
+  },
+  "cobalt_lamp_fall": {
+    "subtitle": "sounds.geofy.cobalt_lamp_fall",
+    "sounds": [
+      "geofy:cobalt_lamp_fall"
+    ]
+  },
+  "cobalt_lamp_hit": {
+    "subtitle": "sounds.geofy.cobalt_lamp_hit",
+    "sounds": [
+      "geofy:cobalt_lamp_hit"
+    ]
+  },
+  "cobalt_lamp_break": {
+    "subtitle": "sounds.geofy.cobalt_lamp_break",
+    "sounds": [
+      "geofy:cobalt_lamp_break"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "geofy:bar_brawl",
+        "stream": true
+      }
+    ]
+  },
+  "preto_stish": {
+    "sounds": [
+      {
+        "name": "geofy:preto_stish",
+        "stream": true
+      }
+    ]
   }
 }

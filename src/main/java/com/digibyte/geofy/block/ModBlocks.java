@@ -6,6 +6,7 @@ import com.digibyte.geofy.block.custom.SpeedyBlock;
 import com.digibyte.geofy.block.custom.TurnipCropBlock;
 import com.digibyte.geofy.item.ModCreativeModeTab;
 import com.digibyte.geofy.item.ModItems;
+import com.digibyte.geofy.sound.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -96,7 +97,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COBALT_LAMP = registerBlock("cobalt_lamp",
             () -> new CobaltLampBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(2f).requiresCorrectToolForDrops()
+                    .strength(2f).requiresCorrectToolForDrops().sound(ModSounds.COBALT_LAMP_SOUNDS)
                     .lightLevel((state)-> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)), tab);
 
     public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",

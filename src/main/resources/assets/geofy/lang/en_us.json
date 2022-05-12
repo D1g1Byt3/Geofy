@@ -68,9 +68,18 @@
   "tooltip.block.speedy_block": "Press §eSHIFT§r for more Info!",
 
   "sounds.geofy.scanning_rod_found_ore": "Scanning Rod found Ore!",
+  "sounds.geofy.cobalt_lamp_fall": "Landed on Cobalt Lamp",
+  "sounds.geofy.cobalt_lamp_break": "Broke Cobalt Lamp",
+  "sounds.geofy.cobalt_lamp_step": "Walking on Cobalt Lamp",
+  "sounds.geofy.cobalt_lamp_place": "Cobalt Lamp Placed",
+  "sounds.geofy.cobalt_lamp_hit": "Hitting Cobalt Lamp",
+
+  "item.geofy.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.geofy.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "item.geofy.preto_stish_music_disc": "Preto Stish Music Disc",
+  "item.geofy.preto_stish_music_disc.desc": "D1g1Byt3 feat. Marzan - Presto Stish",
 
   "enchantment.geofy.lightning_striker": "Lightning Striker"
-
-
 
 }

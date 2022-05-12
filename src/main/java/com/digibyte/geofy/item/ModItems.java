@@ -3,6 +3,7 @@ package com.digibyte.geofy.item;
 import com.digibyte.geofy.GeofyMod;
 import com.digibyte.geofy.block.ModBlocks;
 import com.digibyte.geofy.item.custom.*;
+import com.digibyte.geofy.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -63,6 +64,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new Item.Properties().tab(tab)));
+
+    public static final RegistryObject<Item> BAR_BRAWL_RECORD = ITEMS.register("bar_brawl_music_disc",
+            () -> new RecordItem(4, ModSounds.BAR_BRAWL,
+                    new Item.Properties().tab(tab).stacksTo(1)));
+
+    public static final RegistryObject<Item> PRETO_STISH_RECORD = ITEMS.register("preto_stish_music_disc",
+            () -> new RecordItem(4, ModSounds.PRETO_STISH,
+                    new Item.Properties().tab(tab).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus){

@@ -8,7 +8,7 @@ import com.digibyte.geofy.util.ModItemProperties;
 import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.level.block.Block;
+//import com.tterrag.registrate.Registrate;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
