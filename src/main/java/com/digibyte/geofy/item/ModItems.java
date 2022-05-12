@@ -49,6 +49,9 @@ public class ModItems {
     public static final RegistryObject<Item> COBALT_STAFF = ITEMS.register("cobalt_staff",
             () -> new Item(new Item.Properties().tab(tab).stacksTo(1)));
 
+    public static final RegistryObject<Item> COBALT_BOW = ITEMS.register("cobalt_bow",
+            () -> new BowItem(new Item.Properties().tab(tab).durability(1000)));
+
     public static final RegistryObject<Item> COBALT_HELMET = ITEMS.register("cobalt_helmet",
             () -> new ModArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD, new Item.Properties().tab(tab)));
     public static final RegistryObject<Item> COBALT_CHESTPLATE = ITEMS.register("cobalt_chestplate",

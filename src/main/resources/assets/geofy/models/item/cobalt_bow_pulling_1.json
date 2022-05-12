@@ -1,0 +1,6 @@
+{
+    "parent": "geofy:item/cobalt_bow",
+    "textures": {
+        "layer0": "geofy:item/cobalt_bow_pulling_1"
+    }
+}
