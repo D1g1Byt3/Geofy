@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "geofy:cobalt_ingot"
+    },
+    "title": "Geofy Mod",
+    "description": "The Power lies in the Cobalt!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "geofy:textures/block/cobalt_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "geofy:cobalt_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

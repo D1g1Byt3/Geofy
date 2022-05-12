@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "geofy:scanning_rod"
+    },
+    "title": "Scanning Rod",
+    "description": "If it doesn't work, the Rod doesn't like you!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "geofy:geofy",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "geofy:scanning_rod"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
