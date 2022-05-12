@@ -1,6 +1,7 @@
 package com.digibyte.geofy.item.custom;
 
 import com.digibyte.geofy.item.ModItems;
+import com.digibyte.geofy.sound.ModSounds;
 import com.digibyte.geofy.util.InventoryUtil;
 import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
@@ -9,6 +10,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -41,6 +43,7 @@ public class ScanningRodItem extends Item {
                 Block blockBelow = pContext.getLevel().getBlockState(positionClicked.below(i)).getBlock();
 
                 if(isValuableBlock(blockBelow)){
+                    assert player != null;
                     outputValuableCoordinates(positionClicked.below(i), player, blockBelow);
                     foundBlock = true;
 
@@ -48,11 +51,15 @@ public class ScanningRodItem extends Item {
                         addNbtToDataTablet(player, positionClicked.below(i), blockBelow);
                     }
 
+                    pContext.getLevel().playSound(player, positionClicked, ModSounds.SCANNING_ROD_FOUND_ORE.get(), SoundSource.BLOCKS, 1f, 1f);
+
+
                     break;
                 }
             }
 
             if(!foundBlock){
+                assert player != null;
                 player.sendMessage(new TranslatableComponent("item.geofy.scanning_rod.no_valuables"),
                         player.getUUID());
             }

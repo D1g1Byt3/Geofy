@@ -1,0 +1,8 @@
+{
+  "scanning_rod_found_ore": {
+    "subtitle": "sounds.geofy.scanning_rod_found_ore",
+    "sounds": [
+      "geofy:scanning_rod_found_ore"
+    ]
+  }
+}
