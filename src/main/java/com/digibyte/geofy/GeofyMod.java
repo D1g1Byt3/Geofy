@@ -2,6 +2,7 @@ package com.digibyte.geofy;
 
 import com.digibyte.geofy.block.ModBlocks;
 import com.digibyte.geofy.enchantment.ModEnchantments;
+import com.digibyte.geofy.fluid.ModFluids;
 import com.digibyte.geofy.item.ModItems;
 import com.digibyte.geofy.painting.ModPaintings;
 import com.digibyte.geofy.sound.ModSounds;
@@ -51,6 +52,7 @@ public class GeofyMod
         ModEnchantments.register(eventBus);
         ModSounds.register(eventBus);
         ModPaintings.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -67,6 +69,10 @@ public class GeofyMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_BLASTER.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
 
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_DOOR.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_TRAPDOOR.get(), RenderType.cutout());
