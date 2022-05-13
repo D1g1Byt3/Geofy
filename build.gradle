@@ -33,7 +33,7 @@ if (enableMixin) {
     apply plugin: 'org.spongepowered.mixin'
 }
 
-version = '0.0.1-1.18.1'
+version = '0.1.5-1.18.1'
 group = 'com.digibyte.geofy' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'geofy'
 

@@ -3,7 +3,10 @@ package com.digibyte.geofy.event;
 import com.digibyte.geofy.GeofyMod;
 import com.digibyte.geofy.command.ReturnHomeCommand;
 import com.digibyte.geofy.command.SetHomeCommand;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,4 +29,17 @@ public class ModEvents {
                     event.getOriginal().getPersistentData().getIntArray(GeofyMod.MOD_ID + "homepos"));
         }
     }
+
+    @SubscribeEvent
+    public static void setEntityOnFireWhenHit(LivingDamageEvent event){
+        if(!event.getEntity().level.isClientSide()){
+            Player player = (Player)event.getSource().getDirectEntity();
+            if(player.getMainHandItem().getItem() == Items.NETHER_BRICK){
+                player.getMainHandItem().shrink(1);
+                event.getEntityLiving().setSecondsOnFire(2);
+            }
+        }
+    }
+
+
 }
