@@ -1,13 +1,17 @@
 package com.digibyte.geofy;
 
 import com.digibyte.geofy.block.ModBlocks;
+import com.digibyte.geofy.block.entity.ModBlockEntities;
 import com.digibyte.geofy.enchantment.ModEnchantments;
 import com.digibyte.geofy.fluid.ModFluids;
 import com.digibyte.geofy.item.ModItems;
 import com.digibyte.geofy.painting.ModPaintings;
+import com.digibyte.geofy.screen.CobaltBlasterScreen;
+import com.digibyte.geofy.screen.ModMenuTypes;
 import com.digibyte.geofy.sound.ModSounds;
 import com.digibyte.geofy.util.ModItemProperties;
 import com.digibyte.geofy.util.ModTags;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 //import com.tterrag.registrate.Registrate;
@@ -54,6 +58,9 @@ public class GeofyMod
         ModPaintings.register(eventBus);
         ModFluids.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
         // Register ourselves for server and other game events we are interested in
@@ -78,6 +85,10 @@ public class GeofyMod
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_TRAPDOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
+
+        ModItemProperties.addCustomItemProperties();
+
+        MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)
