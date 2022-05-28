@@ -7,7 +7,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.ai.village.poi.PoiSection;
 import net.minecraft.world.entity.player.Inventory;
 
 public class CobaltBlasterScreen extends AbstractContainerScreen<CobaltBlasterMenu> {
@@ -34,6 +33,16 @@ public class CobaltBlasterScreen extends AbstractContainerScreen<CobaltBlasterMe
 
         this.blit(pPoseSTack, x, y, 0, 0, imageWidth, imageHeight);
 
+        if(menu.isCrafting()){
+            blit(pPoseSTack, x + 84, y + 22, 176, 14, menu.getScaledProgress(), 36);
+        }
+
+        if(menu.hasFuel()){
+            blit(pPoseSTack, x + 18, y + 33 + 14 - menu.getScaledFuelProgress(), 176,
+                    14 - menu.getScaledFuelProgress(), 14, menu.getScaledFuelProgress());
+        }
+
+
     }
 
     @Override
@@ -43,10 +52,4 @@ public class CobaltBlasterScreen extends AbstractContainerScreen<CobaltBlasterMe
         super.render(pPoseStack, mouseX, mouseY, delta);
         renderTooltip(pPoseStack, mouseX, mouseY);
     }
-
-
-
-
-
-
 }

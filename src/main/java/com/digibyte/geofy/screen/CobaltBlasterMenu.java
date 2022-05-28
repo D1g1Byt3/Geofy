@@ -17,16 +17,18 @@ import net.minecraftforge.items.SlotItemHandler;
 public class CobaltBlasterMenu extends AbstractContainerMenu {
     private final CobaltBlasterBlockEntity blockEntity;
     private final Level level;
+    private final ContainerData data;
 
     public CobaltBlasterMenu(int windowId, Inventory inv, FriendlyByteBuf extraData) {
-        this(windowId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()));
+        this(windowId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(4));
     }
 
-    public CobaltBlasterMenu(int windowId, Inventory inv, BlockEntity entity) {
+    public CobaltBlasterMenu(int windowId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.COBALT_BLASTER_MENU.get(), windowId);
         checkContainerSize(inv, 4);
         blockEntity = ((CobaltBlasterBlockEntity) entity);
         this.level = inv.player.level;
+        this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
@@ -37,7 +39,36 @@ public class CobaltBlasterMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(handler, 2, 66, 50));
             this.addSlot(new ModResultSlot(handler, 3, 114, 33));
         });
+
+        addDataSlots(data);
     }
+
+    public boolean isCrafting(){
+        return data.get(0) > 0;
+    }
+
+    public boolean hasFuel(){
+        return data.get(2) > 0;
+    }
+
+    public int getScaledProgress(){
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1); //Max Progress
+        int progressArrowSize = 26; // This is width of pixels of the arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledFuelProgress(){
+        int fuelProgress = this.data.get(2);
+        int maxFuelProgress = this.data.get(3);
+        int fuelProgressSize = 14;
+
+        return maxFuelProgress != 0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
+    }
+
+
+
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     // must assign a slot number to each of the slots used by the GUI.

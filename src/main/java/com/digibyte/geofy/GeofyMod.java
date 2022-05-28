@@ -6,6 +6,7 @@ import com.digibyte.geofy.enchantment.ModEnchantments;
 import com.digibyte.geofy.fluid.ModFluids;
 import com.digibyte.geofy.item.ModItems;
 import com.digibyte.geofy.painting.ModPaintings;
+import com.digibyte.geofy.recipe.ModRecipes;
 import com.digibyte.geofy.screen.CobaltBlasterScreen;
 import com.digibyte.geofy.screen.ModMenuTypes;
 import com.digibyte.geofy.sound.ModSounds;
@@ -14,21 +15,14 @@ import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-//import com.tterrag.registrate.Registrate;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -45,7 +39,7 @@ public class GeofyMod
 
 
     public GeofyMod() {
-        // Register the setup method for modloading
+        // Register the setup method for mod loading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
@@ -60,6 +54,7 @@ public class GeofyMod
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+        ModRecipes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -87,6 +82,7 @@ public class GeofyMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
 
         ModItemProperties.addCustomItemProperties();
+
 
         MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
     }

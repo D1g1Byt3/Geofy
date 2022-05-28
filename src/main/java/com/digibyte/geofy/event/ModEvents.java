@@ -30,16 +30,21 @@ public class ModEvents {
         }
     }
 
+    /*
     @SubscribeEvent
     public static void setEntityOnFireWhenHit(LivingDamageEvent event){
-        if(!event.getEntity().level.isClientSide()){
-            Player player = (Player)event.getSource().getDirectEntity();
-            if(player.getMainHandItem().getItem() == Items.NETHER_BRICK){
+        if(!event.getEntity().level.isClientSide()) {
+            Player player = (Player) event.getSource().getDirectEntity();
+            if (player == null) {
+            if (player.getMainHandItem().getItem() == Items.NETHER_BRICK) {
                 player.getMainHandItem().shrink(1);
                 event.getEntityLiving().setSecondsOnFire(2);
             }
         }
+        }
     }
 
+
+     */
 
 }

@@ -1,0 +1,14 @@
+{
+  "type": "geofy:cobalt_blasting",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_sword"
+    },
+    {
+      "item": "geofy:cobalt_ingot"
+    }
+  ],
+  "output": {
+    "item": "geofy:cobalt_sword"
+  }
+}
