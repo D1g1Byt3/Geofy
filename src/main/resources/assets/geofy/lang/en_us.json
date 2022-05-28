@@ -53,7 +53,12 @@
   "block.geofy.cobalt_door": "Cobalt Door",
   "block.geofy.cobalt_trapdoor": "Cobalt TrapDoor",
   "block.geofy.cherry_blossom_trapdoor": "Cherry Blossom TrapDoor",
-  "block.geofy.cherry_blossom_door": "Cherry Blossom Door",
+  "block.geofy.cherry_blossom_log": "Cherry Blossom Log",
+  "block.geofy.cherry_blossom_wood": "Cherry Blossom Wood",
+  "block.geofy.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
+  "block.geofy.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
+  "block.geofy.cherry_blossom_planks": "Cherry Blossom Planks",
+
 
   "block.geofy.cobalt_blaster": "Cobalt Blaster",
 

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "geofy:cherry_blossom_log",
+    "geofy:stripped_cherry_blossom_log",
+    "geofy:cherry_blossom_wood",
+    "geofy:stripped_cherry_blossom_wood"
+  ]
+}

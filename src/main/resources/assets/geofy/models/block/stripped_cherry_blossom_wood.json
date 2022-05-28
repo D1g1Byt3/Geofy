@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "geofy:block/stripped_cherry_blossom_log",
+    "side": "geofy:block/stripped_cherry_blossom_log"
+  }
+}
