@@ -20,6 +20,7 @@
   "item.geofy.scanning_rod" : "Scanning Rod",
   "item.geofy.honey_bucket" : "Honey Bucket",
 
+
   "item.geofy.cobalt_helmet" : "Cobalt Helmet",
   "item.geofy.cobalt_chestplate" : "Cobalt Chestplate",
   "item.geofy.cobalt_leggings" : "Cobalt Leggings",
@@ -58,6 +59,8 @@
   "block.geofy.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
   "block.geofy.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
   "block.geofy.cherry_blossom_planks": "Cherry Blossom Planks",
+  "block.geofy.cherry_blossom_sign": "Cherry Blossom Sign",
+
 
 
   "block.geofy.cobalt_blaster": "Cobalt Blaster",

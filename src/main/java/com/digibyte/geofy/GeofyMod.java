@@ -1,6 +1,7 @@
 package com.digibyte.geofy;
 
 import com.digibyte.geofy.block.ModBlocks;
+import com.digibyte.geofy.block.ModWoodTypes;
 import com.digibyte.geofy.block.entity.ModBlockEntities;
 import com.digibyte.geofy.enchantment.ModEnchantments;
 import com.digibyte.geofy.fluid.ModFluids;
@@ -15,9 +16,13 @@ import com.digibyte.geofy.util.ModTags;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -85,6 +90,8 @@ public class GeofyMod
 
 
         MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
+
+        WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -94,11 +101,10 @@ public class GeofyMod
             ComposterBlock.COMPOSTABLES.put(ModItems.TURNIP.get(), 0.65f);
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
+
+            BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+            Sheets.addWoodType(ModWoodTypes.CHERRY_BLOSSOM);
         });
-
-
-
-
 
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");

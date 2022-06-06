@@ -2,6 +2,7 @@ package com.digibyte.geofy.item;
 
 import com.digibyte.geofy.GeofyMod;
 import com.digibyte.geofy.block.ModBlocks;
+import com.digibyte.geofy.block.entity.ModBlockEntities;
 import com.digibyte.geofy.fluid.ModFluids;
 import com.digibyte.geofy.item.custom.*;
 import com.digibyte.geofy.sound.ModSounds;
@@ -78,6 +79,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> HONEY_BUCKET = ITEMS.register("honey_bucket",
             () -> new BucketItem(ModFluids.HONEY_FLUID, new Item.Properties().tab(tab).stacksTo(1)));
+
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_SIGN_ITEM = ITEMS.register("cherry_blossom_sign",
+            () -> new SignItem(new Item.Properties().tab(tab).stacksTo(16),
+                    ModBlocks.CHERRY_BLOSSOM_SIGN.get(), ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get()));
 
 
     public static void register(IEventBus eventBus){
